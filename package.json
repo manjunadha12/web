@@ -2,13 +2,16 @@
   "name": "medi-consult",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://manjunadha12.github.io/web/",
   "type": "module",
   "scripts": {
     "dev": "concurrently \"vite --host 0.0.0.0\" \"node server/index.js\"",
     "web": "vite --host 0.0.0.0",
     "api": "node server/index.js",
     "build": "tsc && vite build",
-    "preview": "vite preview --host 0.0.0.0"
+    "preview": "vite preview --host 0.0.0.0",
+    "predeploy": "npm.cmd run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@vitejs/plugin-react": "latest",
@@ -26,6 +29,7 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "latest",
+    "gh-pages": "^6.3.0",
     "postcss": "latest",
     "tailwindcss": "^3.4.17",
     "typescript": "latest",
